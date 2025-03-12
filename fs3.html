@@ -9,9 +9,17 @@
     name: prompt("Enter the student's name:"),
     grade: parseInt(prompt("Enter the student's grade:")),
     subjects: prompt("Enter the student's subjects separated bycommas:").split(',').map(subject => subject.trim()),
+
+    passed:function(){
+                    return this.grade>=50;
+                }
+                
+            };
+            return student;
+            
     };
-    return student;
-    }
+    
+
     // Function to display student details
     function displayInfo(student) {
     console.log("Student Details:");
