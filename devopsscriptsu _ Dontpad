@@ -1,0 +1,309 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://dontpad.com/devopsscriptsu
+Subject: devopsscriptsu | Dontpad
+Date: Mon, 2 Jun 2025 09:44:58 +0530
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--qKecig5cCxnztWynW28wh75yLGVCcqm0eRWQoOI2LM----"
+
+
+------MultipartBoundary--qKecig5cCxnztWynW28wh75yLGVCcqm0eRWQoOI2LM----
+Content-Type: text/html
+Content-ID: <frame-97791D6FB8FAFE30DE41B95EE38E3C8F@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://dontpad.com/devopsscriptsu
+
+<!DOCTYPE html><html lang="en" style="font-size: 16px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+	<link rel="stylesheet" type="text/css" href="https://dontpad.com/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="https://dontpad.com/css/dontpad.css">
+	<link rel="stylesheet" type="text/css" href="https://dontpad.com/css/cookie-banner.css">
+	<link rel="stylesheet" type="text/css" href="https://dontpad.com/css/ads.css">
+	<link rel="stylesheet" type="text/css" href="https://dontpad.com/css/status.css">
+	<link rel="stylesheet" type="text/css" href="https://dontpad.com/css/modal.css">
+	
+	<meta name="robots" content="noindex, nofollow">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	<link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://dontpad.com/assets/favicon-black.png">
+	<link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="https://dontpad.com/assets/favicon.png" media="(prefers-color-scheme: dark)">
+	<link rel="shortcut icon" type="image/x-icon" sizes="64x64" href="https://dontpad.com/assets/favicon-black.svg">
+	<link rel="shortcut icon" type="image/x-icon" sizes="64x64" href="https://dontpad.com/assets/favicon.svg" media="(prefers-color-scheme: dark)">
+	<title>devopsscriptsu | Dontpad</title>
+
+</head>
+
+<body>
+	<div class="status-body">
+		<svg class="status-svg"></svg>
+		<p class="status-text"></p>
+	</div>
+
+	<div class="dp-usable">
+
+		<div id="menu-div" style="display: none;">
+			<ul id="menu">
+			</ul>
+		</div>
+
+		<div class="dp-right-side">
+			<text-div>
+				<textarea id="text"></textarea>
+			</text-div>
+		</div>
+
+	</div>
+
+	<div class="cookie-body" style="display: flex;">
+		<p class="cookie-txt">
+			Dontpad uses cookies and similar technologies to improve your experience and to show you more relevant ads,
+			according to our cookie policy. By clicking 'Accept' you are indicating that you have read and that you accept our
+			<a href="https://dontpad.com/cookie.html" target="_blank">Cookie Policy</a>, <a href="https://dontpad.com/privacy.html" target="_blank">Privacy
+				Policy</a> and <a href="https://dontpad.com/content.html">Content Policy</a>.
+		</p>
+		<button class="cookie-button">
+			Accept
+		</button>
+	</div>
+
+
+	
+	
+
+
+	
+
+
+</body></html>
+------MultipartBoundary--qKecig5cCxnztWynW28wh75yLGVCcqm0eRWQoOI2LM----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://dontpad.com/css/modal.css
+
+@charset "utf-8";
+
+.modal { --modal-width: 30rem; width: var(--modal-width); background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 4px 7px 0px; top: 40%; left: calc(50% - (var(--modal-width) / 2)); position: absolute; border-radius: 5px; font-family: Arial; padding: 1.5rem; }
+
+.modal h2 { margin-bottom: 1.1rem; }
+
+.modal p { margin: 0px; }
+
+.modal-body { font-size: 1rem; line-height: 1.25rem; }
+
+.modal-footer { text-align: center; margin-top: 1.1rem; display: flex; justify-content: end; }
+
+.smaller-footer { margin-top: 1rem; }
+
+.modal .btn { color: rgb(255, 255, 255); background-color: rgb(51, 51, 51); border-radius: 3px; margin-left: 8px; border: 0px; font-size: 1rem; padding: 0.63rem; cursor: pointer; min-width: 90px; position: relative; }
+
+.modal .btn:hover { color: rgb(238, 238, 238); background-color: rgb(34, 34, 34); }
+
+.modal .btn:active { color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); }
+
+.modal .btn:disabled { color: rgba(255, 255, 255, 0.2); background-color: rgb(51, 51, 51); }
+
+.modal .btn-keep:hover { color: rgb(0, 0, 0); background-color: rgba(34, 34, 34, 0.03); }
+
+.modal .btn-keep:active { color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0.047); }
+
+.modal .btn-keep { background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); border: 1px solid rgb(0, 0, 0); }
+
+@keyframes spinner { 
+  100% { transform: rotate(360deg); }
+}
+
+.modal button dontpad-spinner { opacity: 0; animation: 2s linear 0s infinite normal none running spinner; border-width: 2px; border-style: solid; border-color: rgb(186, 186, 186) rgb(255, 255, 255) rgb(255, 255, 255); border-image: initial; border-radius: 50%; box-sizing: border-box; height: 20px; left: 50%; margin-left: -10px; margin-top: -10px; position: absolute; top: 50%; width: 20px; z-index: 2; }
+
+.modal button:disabled dontpad-spinner { opacity: 1; }
+------MultipartBoundary--qKecig5cCxnztWynW28wh75yLGVCcqm0eRWQoOI2LM----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://dontpad.com/css/status.css
+
+@charset "utf-8";
+
+.status-body { height: 30px; width: 30px; border-radius: 15px; opacity: 0; position: absolute; top: 32px; right: 32px; display: flex; align-items: center; justify-content: space-between; z-index: 1; }
+
+.status-body svg { display: none; background-position: center center; background-repeat: no-repeat; }
+
+.status-body p { display: none; font-size: 14px; margin-inline: 12px; overflow: hidden; white-space: nowrap; }
+
+.attention { background-color: rgb(254, 255, 164); padding-inline: 5px; width: auto; animation: 2s ease-in-out 0s 1 normal forwards running apear; }
+
+.attention svg { display: block; width: 20px; height: 20px; background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOSAxOC4xNiI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogbm9uZTsKICAgICAgICBzdHJva2U6ICMwMDA7CiAgICAgICAgc3Ryb2tlLW1pdGVybGltaXQ6IDEwOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8ZyBpZD0iTGF5ZXJfMi0yIiBkYXRhLW5hbWU9IkxheWVyIDIiPgogICAgPGc+CiAgICAgIDxnPgogICAgICAgIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTkuNSwuNWMzLjc4LC4wMiw3LjIsMi41OSw4LjE0LDYuNDMsLjY0LDIuNjEsMCw1LjIzLTEuNTQsNy4yIi8+CiAgICAgICAgPHBvbHlnb24gcG9pbnRzPSIxNC4yOCAxMS42IDEzLjQ2IDE3LjUzIDE5IDE1LjI3IDE0LjI4IDExLjYiLz4KICAgICAgPC9nPgogICAgICA8Zz4KICAgICAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik05LjUsMTcuNjZjLTMuNzgtLjAyLTcuMi0yLjU5LTguMTQtNi40My0uNjQtMi42MSwwLTUuMjMsMS41NC03LjIiLz4KICAgICAgICA8cG9seWdvbiBwb2ludHM9IjQuNzIgNi41NiA1LjU0IC42NCAwIDIuODkgNC43MiA2LjU2Ii8+CiAgICAgIDwvZz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPg=="); animation: 3s cubic-bezier(0.65, 0.36, 0.35, 0.71) 0s infinite normal none running infRotate; }
+
+.attention p { display: block; }
+
+.save p { display: block; }
+
+.save { background-color: rgb(190, 255, 161); padding-inline: 4px; width: auto; }
+
+.save svg { display: block; width: 22px; height: 22px; }
+
+@keyframes apear { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes disapear { 
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes infRotate { 
+  0% { rotate: 0deg; }
+  100% { rotate: 360deg; }
+}
+
+@keyframes warningToSave { 
+  0% { background-color: rgb(254, 255, 164); }
+  100% { background-color: rgb(190, 255, 161); }
+}
+
+@keyframes shrinkAttention { 
+  0% { width: 193.25px; }
+  100% { width: 39.7px; }
+}
+
+@keyframes shrinkFromSaveSmall { 
+  0% { width: 39.7px; }
+  100% { width: 0px; }
+  0% { margin-inline: 12px; }
+  100% { margin-inline: 0px; }
+}
+
+@keyframes shrinkFromSave { 
+  0% { width: 54.48px; }
+  100% { width: 0px; }
+  0% { margin-inline: 12px; }
+  100% { margin-inline: 0px; }
+}
+------MultipartBoundary--qKecig5cCxnztWynW28wh75yLGVCcqm0eRWQoOI2LM----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://dontpad.com/css/ads.css
+
+@charset "utf-8";
+
+iframe.clever-ads, iframe.akcelo-ads { position: absolute; right: 0px; bottom: 0px; margin-bottom: 7.7rem; margin-right: 18rem; }
+
+.left-menu-div { width: 100%; height: 100%; max-height: calc(601px + 2rem); background-color: rgb(221, 221, 221); display: flex; flex-direction: column; align-self: flex-end; min-height: 0px; }
+
+.ad-div-left { height: 100%; max-height: 600px; min-height: 0px; }
+
+.left-ad { width: 100%; height: 100%; }
+
+.ad-div-right { margin: 0px; min-height: 100%; min-width: 160px; width: 15vw; border-left: 1px solid rgb(204, 204, 204); display: flex; flex-direction: column; flex-shrink: 0; }
+
+.right-ad { width: 100%; height: 100%; max-height: calc(100% - 31px); background-color: rgb(221, 221, 221); display: flex; flex-direction: column; align-self: flex-end; min-height: 0px; }
+
+.footer-div { position: static; bottom: 0px; width: 100%; display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+
+.footer-ad { width: 100%; height: 90px; }
+
+.ad-btns-menu-footer, .ad-btns-menu-right { position: absolute; border: none; color: rgb(221, 221, 221); background-color: rgb(51, 51, 51); display: flex; align-items: center; }
+
+.ad-btns-menu-footer { right: 0px; bottom: 90px; border-radius: 5px 5px 0px 0px; }
+
+.ad-btns-menu-right { right: 1.2rem; top: 344px; border-radius: 0px 0px 5px 5px; }
+
+.btn-open-modal, .btn-open-modal-right, .btn-menu { padding: 0.5rem 1rem; font-size: 1rem; line-height: 1rem; border: none; border-radius: 5px 5px 0px 0px; cursor: pointer; color: rgb(221, 221, 221); background-color: rgb(51, 51, 51); }
+
+.btn-menu { border-radius: 0px; flex-shrink: 0; border-bottom: 1px solid rgb(204, 204, 204); }
+
+.btn-open-modal-right { border-radius: 0px 0px 5px 5px; }
+
+.btn-open-modal:hover, .btn-open-modal-right:hover, .btn-menu:hover { color: rgb(238, 238, 238); background-color: rgb(34, 34, 34); }
+
+.btn-open-modal:active, .btn-open-modal-right:active, .btn-menu:active { color: rgb(255, 255, 255); background-color: rgb(0, 0, 0); }
+
+.footer-content { width: 100%; height: 90px; background-color: rgb(221, 221, 221); display: flex; justify-content: center; }
+
+@media screen and (max-width: 1100px) {
+  .ad-div-right { display: none; }
+}
+------MultipartBoundary--qKecig5cCxnztWynW28wh75yLGVCcqm0eRWQoOI2LM----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://dontpad.com/css/cookie-banner.css
+
+@charset "utf-8";
+
+.cookie-body { display: none; box-sizing: border-box; font-size: 1rem; background-color: rgb(0, 0, 0); position: fixed; bottom: 0px; width: 100%; align-items: center; padding: 0.1rem; justify-content: center; border-top: 0.06rem solid rgb(204, 204, 204); z-index: 2; }
+
+.cookie-txt, .cookie-txt a { color: rgba(255, 255, 255, 0.8); display: inline; max-width: 1000px; }
+
+.cookie-txt a { text-decoration: underline; }
+
+.cookie-txt a:hover { color: rgb(255, 255, 255); }
+
+.cookie-button { box-sizing: border-box; height: 1.9rem; padding-inline: 0.6rem; margin-left: 0.5rem; border-radius: 0.2rem; color: rgb(34, 34, 34); font-size: 0.7rem; font-weight: bold; white-space: nowrap; background-color: rgb(221, 221, 221); border: none; cursor: pointer; }
+
+.cookie-button:hover { color: rgb(17, 17, 17); background-color: rgb(238, 238, 238); }
+
+.cookie-button:active { color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); }
+
+@media screen and (max-device-width: 660px) {
+  .cookie-body { font-size: 3vmin; padding: 2vh; }
+  .cookie-button { font-size: 3vmin; height: 10vmin; margin-left: 1.6vw; }
+}
+------MultipartBoundary--qKecig5cCxnztWynW28wh75yLGVCcqm0eRWQoOI2LM----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://dontpad.com/css/dontpad.css
+
+@charset "utf-8";
+
+.dp-usable { display: flex; height: 100%; width: 100%; }
+
+#menu-div { margin: 0px; overflow: clip; min-height: 100%; min-width: 160px; width: 15vw; background-color: rgb(248, 248, 248); border-right: 1px solid rgb(204, 204, 204); display: flex; flex-direction: column; flex-shrink: 0; }
+
+#menu { min-height: 10.5rem; margin-block: 0.8rem 0.5rem; padding-left: 0px; overflow: clip scroll; width: 100%; flex: 1 1 0%; scrollbar-color: rgb(153, 153, 153) transparent; scrollbar-width: thin; }
+
+#menu::-webkit-scrollbar { width: 0.2rem; }
+
+#menu::-webkit-scrollbar-track { background-color: transparent; }
+
+#menu::-webkit-scrollbar-thumb { background-color: rgb(153, 153, 153); border-radius: 0.1rem; }
+
+#menu li { list-style: none; padding: 0px; width: inherit; text-align: left; white-space: nowrap; font-size: 1rem; }
+
+a { padding-block: 0.2rem; padding-inline: 0.8rem 0.4rem; color: rgba(0, 0, 0, 0.8); text-decoration: none; display: block; overflow: hidden; text-overflow: ellipsis; }
+
+a:hover { color: rgb(0, 0, 0); background-color: rgb(240, 240, 240); text-decoration: underline; }
+
+.overflowed-content { content: attr(data-content); color: rgb(0, 0, 0); text-decoration: underline; display: flex; align-items: center; position: absolute; margin-left: -0.5rem; background-color: rgb(240, 240, 240); outline: rgb(170, 170, 170) solid 1px; padding: 0.2rem 0.5rem; pointer-events: none; }
+
+.dp-right-side { display: flex; flex-direction: column; min-width: 0px; width: 100%; min-height: 100%; height: 100%; }
+
+text-div { margin: auto; width: 100%; height: 100%; border: none; outline: none; resize: none; box-sizing: border-box; }
+
+#text { margin: auto; font-family: Arial, Helvetica, Tahoma, Verdana; font-size: 1rem; width: 100%; height: 100%; padding: 0.6rem 0.6rem 2rem; border: none; outline: none; color: rgb(17, 17, 17); resize: none; overflow-y: scroll; box-sizing: border-box; }
+
+captcha-overlay { display: flex; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.533); align-items: center; justify-content: center; z-index: 3; }
+
+captcha-modal { background-color: rgb(255, 255, 255); padding: 2.5rem; display: flex; flex-flow: column; justify-content: center; align-items: center; border-radius: 4px; }
+
+captcha-modal .captcha-message { font-size: 1.6rem; color: rgb(0, 0, 0); }
+------MultipartBoundary--qKecig5cCxnztWynW28wh75yLGVCcqm0eRWQoOI2LM----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://dontpad.com/css/styles.css
+
+@charset "utf-8";
+
+html { margin: 0rem; padding: 0rem; height: 100%; }
+
+body { margin: 0rem; padding: 0rem; background-color: rgb(245, 245, 245); font-size: 1rem; font-family: Arial, Helvetica, Tahoma, Verdana; overflow: hidden; height: 100%; display: flex; flex-direction: column; }
+
+h2 { margin: 0px; font-size: 1.3rem; }
+------MultipartBoundary--qKecig5cCxnztWynW28wh75yLGVCcqm0eRWQoOI2LM------
