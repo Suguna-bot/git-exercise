@@ -1,0 +1,209 @@
+experiment-2
+
+3. Set Up the pom.xml File:
+The pom.xml file is where you define dependencies, plugins, and other configurations for your Maven project.
+Example of a basic pom.xml :
+
+1 <project xmlns="http://maven.apache.org/POM/4.0.0"
+2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-
+4.0.0.xsd">
+4 <modelVersion>4.0.0</modelVersion>
+5
+6 <groupId>com.example</groupId>
+7 <artifactId>simple-project</artifactId>
+8 <version>1.0-SNAPSHOT</version>
+9
+10 <dependencies>
+11 <!-- Add your dependencies here -->
+12 </dependencies>
+13
+14 </project>
+
+Add Dependencies for Selenium and TestNG:
+In the pom.xml , add Selenium and TestNG dependencies under the <dependencies> section
+
+<dependencies>
+2 <dependency>
+3 <groupId>org.seleniumhq.selenium</groupId>
+4 <artifactId>selenium-java</artifactId>
+5 <version>3.141.59</version>
+6 </dependency>
+7 <dependency>
+8 <groupId>org.testng</groupId>
+9 <artifactId>testng</artifactId>
+10 <version>7.4.0</version>
+11 <scope>test</scope>
+</dependency>
+13 </dependencies>
+
+
+Steps to Deploy to GitHub Pages Using /docs Folder
+1. Modify Maven Configuration to Copy Static Files to /docs Folder: First, you need to ensure that Maven places
+your static files ( index.html , style.css , logo.png ) into the /docs folder instead of the target directory.
+To do this, configure the Maven Resources Plugin in your pom.xml to copy the files directly into /docs :
+
+2 <plugins>
+3 <plugin>
+4 <groupId>org.apache.maven.plugins</groupId>
+5 <artifactId>maven-resources-plugin</artifactId>
+6 <version>3.2.0</version>
+7 <executions>
+8 <execution>
+9 <phase>prepare-package</phase> <!-- Before packaging -->
+10 <goals>
+11 <goal>copy-resources</goal>
+12 </goals>
+13 <configuration>
+14 <outputDirectory>${project.basedir}/docs</outputDirectory> <!-- Deploy to
+/docs folder -->
+15 <resources>
+16 <resource>
+17 <directory>src/main/resources</directory>
+18 <includes>
+19 <include>**/*</include> <!-- Copy all files in
+src/main/resources -->
+20 </includes>
+</resource>
+22 </resources>
+23 </configuration>
+24 </execution>
+25 </executions>
+26 </plugin>
+27 </plugins>
+28 </build>
+
+mvn clean install
+
+git add docs/*
+2 git commit -m "Deploy site to GitHub Pages"
+
+git push origin master # Or the branch you are using, maybe 'main' in some case
+
+
+7. Write a Simple Selenium Test with TestNG:
+package org.test;
+2
+3 import org.openqa.selenium.WebDriver;
+4 import org.openqa.selenium.chrome.ChromeDriver;
+5 import org.testng.Assert;
+6 import org.testng.annotations.AfterTest;
+7 import org.testng.annotations.BeforeTest;
+8 import org.testng.annotations.Test;
+9
+10 import static org.testng.Assert.assertTrue;
+11
+12 public class WebpageTest {
+13 private static WebDriver driver;
+14
+15 @BeforeTest
+16 public void openBrowser() throws InterruptedException {
+17 driver = new ChromeDriver();
+18 driver.manage().window().maximize();
+19 Thread.sleep(2000);
+20 driver.get("https://sauravsarkar-codersarcade.github.io/CA-MVN/"); // "Note: You should
+use your GITHUB-URL here...!!!"
+21 }
+22
+23 @Test
+24 public void titleValidationTest(){
+25 String actualTitle = driver.getTitle();
+26 String expectedTitle = "Tripillar Solutions";
+27 Assert.assertEquals(actualTitle, expectedTitle);
+28 assertTrue(true, "Title should contain 'Tripillar'");
+29 }
+30
+31 @AfterTest
+32 public void closeBrowser() throws InterruptedException {
+33 Thread.sleep(1000);
+34 driver.quit();
+35 }
+36 }
+
+Run the Test:
+In IntelliJ, right-click the WebPageTest class and select Run 'WebPageTest' .
+The test will launch Chrome, open the webpage, and validate the title
+
+
+Steps to Package the Project as a JAR and Run a Main Class
+1. Add maven-jar-plugin to pom.xml :
+To package your Maven project as a JAR file and specify the main class, we need to configure the maven-jar-plugin
+in the pom.xml .
+Add the following configuration to your pom.xml :
+
+<build>
+2 <plugins>
+3 <!-- Maven JAR Plugin -->
+4 <plugin>
+5 <groupId>org.apache.maven.plugins</groupId>
+6 <artifactId>maven-jar-plugin</artifactId>
+7 <version>3.2.0</version>
+8 <configuration>
+9 <!-- Specify the main class to be executed -->
+10 <archive>
+11 <manifestEntries>
+12 <Main-Class>com.example.MainClass</Main-Class> <!-- Replace with your main
+class path -->
+13 </manifestEntries>
+14 </archive>
+15 </configuration>
+16 </plugin>
+17 </plugins>
+18 </build>
+
+
+2. Create a Main Class:
+In your src/main/java directory, create a class with a main method. For example, create a MainClass.java under
+com.example :
+package com.example;
+2
+3 public class MainClass {
+4 public static void main(String[] args) {
+5 System.out.println("Hello, this is a simple output from the main class!");
+6 }
+7 }
+
+1 mvn clean package
+java -jar target/your-project-name.jar
+
+
+Maven site & deploy Commands - Documentation
+🚀 1. mvn site Command
+The mvn site command is used to generate a project website containing reports like dependencies, build details, test
+results, and more.
+🔹 Steps to Use mvn site
+📝 Step 1: Add Site Plugin in pom.xml
+Before running the site command, you need to add the Maven Site Plugin inside the <build> section of your
+pom.xml :
+
+
+<build>
+2 <plugins>
+3 <plugin>
+4 <groupId>org.apache.maven.plugins</groupId>
+5 <artifactId>maven-site-plugin</artifactId>
+6 <version>3.12.1</version> <!-- Use latest version -->
+7 </plugin>
+8 </plugins>
+9 </build>
+
+1 mvn site
+
+📤 2. mvn deploy Command
+
+Step 1: Create a Local Repository
+1 mkdir D:\my-local-maven-repo
+
+🔧 Step 2: Configure pom.xml for Local Deployment
+<distributionManagement>
+2 <repository>
+3 <id>local-repo</id>
+4 <url>file:///D:/my-local-maven-repo</url>
+5 </repository>
+6 </distributionManagement>
+
+mvn deploy
+
+
+12 </dependency>
+13 </dependencies>
