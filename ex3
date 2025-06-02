@@ -1,0 +1,240 @@
+ex-3
+build.gradle
+plugins {
+2 id 'application'
+3 }
+4
+5 repositories {
+6 mavenCentral()
+7 }
+8
+9 dependencies {
+10 testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+11 }
+12
+13 application {
+14 mainClass = 'com.example.Main'
+15 }
+
+
+Build and Run the Project
+In IntelliJ IDEA, open the Gradle tool window (View → Tool Windows → Gradle).
+Click Tasks > application > run .
+
+Hosting a Static Website on GitHub Pages
+Step 1: Create a /docs Directory
+Create docs inside the root folder (not in src ).
+Add your HTML, CSS, and images inside /docs .
+Step 2: Modify build.gradle to Copy Website Files (This is optional)
+task copyWebsite(type: Copy) {
+2 from 'src/main/resources/website'
+3 into 'docs'
+4 }
+git add .
+2 git commit -m "Deploy website using Gradle"
+3 git push origin main
+
+Testing the Website using Selenium & TestNG in IntelliJ IDEA
+Step 1: Add Selenium & TestNG Dependencies in build.gradle
+1 dependencies {
+2 testImplementation 'org.seleniumhq.selenium:selenium-java:4.28.1' // use the latest stable
+version
+3 testImplementation 'org.testng:testng:7.4.0' // use the latest stable version
+4 }
+5
+6 test {
+7 useTestNG()
+8 }
+
+
+Step 2: Write a Test Script ( src/test/java/org/test/WebpageTest.java )
+package org.test;
+2
+3 import org.openqa.selenium.WebDriver;
+4 import org.openqa.selenium.chrome.ChromeDriver;
+5 import org.testng.Assert;
+6 import org.testng.annotations.AfterTest;
+7 import org.testng.annotations.BeforeTest;
+8 import org.testng.annotations.Test;
+9
+10 import static org.testng.Assert.assertTrue;
+11
+12 public class WebpageTest {
+13 private static WebDriver driver;
+14
+15 @BeforeTest
+16 public void openBrowser() throws InterruptedException {
+17 driver = new ChromeDriver();
+18 driver.manage().window().maximize();
+19 Thread.sleep(2000);
+20 driver.get("https://sauravsarkar-codersarcade.github.io/CA-GRADLE/");
+21 }
+22
+23 @Test
+24 public void titleValidationTest(){
+25 String actualTitle = driver.getTitle();
+26 String expectedTitle = "Tripillar Solutions";
+27 Assert.assertEquals(actualTitle, expectedTitle);
+28 assertTrue(true, "Title should contain 'Tripillar'");
+29
+30 }
+31
+32 @AfterTest
+33 public void closeBrowser() throws InterruptedException {
+34 Thread.sleep(1000);
+35 driver.quit();
+36 }
+39 }
+Step 3: Run the Tests
+Open the Gradle tool window in IntelliJ.
+Click Tasks > verification > test . “Recommended“
+Or run from terminal
+
+
+Packaging a Gradle Project as a JAR
+Step 1: Modify build.gradle for JAR Packaging
+plugins {
+2 id 'java'
+3 id 'application'
+4 }
+5
+6 application {
+7 mainClass = 'com.example.Main'
+8 }
+9 jar {
+10 manifest {
+11 attributes 'Main-Class': 'com.example.Main' // This tells Java where to start execution
+12 }
+13 }
+
+gradle jar
+java -jar......
+
+
+
+
+build.gradle.kts (Kotlin DSL for Gradle)
+Here is a KOTLIN DSL version for Gradle “This is Optional“
+1 // Apply necessary plugins
+2 plugins {
+3 kotlin("jvm") version "1.9.10" // Kotlin plugin for JVM
+4 application // Enables the `run` task
+5 }
+6
+7 // Define project properties
+8 group = "com.example"
+9 version = "1.0.0"
+10 application.mainClass.set("com.example.MainKt") // Define the main class
+11
+12 // Repositories for dependencies
+13 repositories {
+14 mavenCentral() // Fetch dependencies from Maven Central
+15 }
+16
+17 // Dependencies
+18 dependencies {
+19 implementation(kotlin("stdlib")) // Standard Kotlin library
+20 testImplementation("org.junit.jupiter:junit-jupiter:5.9.1") // JUnit 5 for testing
+21 }
+22
+23 // Enable JUnit 5 for tests
+24 tasks.test {
+25 useJUnitPlatform()
+26 }
+27
+28 // JAR packaging
+29 tasks.jar {
+30 manifest {
+31 attributes["Main-Class"] = "com.example.MainKt"
+32 }
+33 }
+
+Main.kt (Inside src/main/kotlin/com/example/ )
+package com.example
+2
+3 fun main() {
+4 println("Hello, Gradle with Kotlin DSL! 🚀")
+5 }
+gradle run
+gradle build
+gradle clean
+gradle jar
+
+
+
+Gradle Kotlin DSL: Setting Up & Building a Kotlin Project in IntelliJ IDEA
+1️⃣ Setting Up the Gradle Project
+Step 1: Create a New Project
+1. Open IntelliJ IDEA.
+2. Click on File > New > Project.
+3. Select Gradle as the build system.
+4. Choose Kotlin as the language.
+5. Select Gradle Kotlin DSL (it will generate build.gradle.kts ).
+6. Name your project (e.g., MVNGRDKOTLINDEMO ).
+7. Set the JDK (use JDK 17.0.4, since that's your version).
+8. Click Finish.
+
+2️⃣ Understanding build.gradle.kts
+1 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+2
+3 plugins {
+4 kotlin("jvm") version "1.8.10" // Use latest stable Kotlin version
+5 application
+6 }
+7
+8 group = "org.example"
+9 version = "1.0-SNAPSHOT"
+10
+11 repositories {
+12 mavenCentral()
+3 }
+14
+15 dependencies {
+16 implementation(kotlin("stdlib")) // Kotlin Standard Library
+17 testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
+18 testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
+19 }
+20
+21 tasks.test {
+22 useJUnitPlatform()
+23 }
+24
+25 tasks.withType<KotlinCompile> {
+26 kotlinOptions.jvmTarget = "17" // Match with your JDK version
+27 }
+28
+29 application {
+30 mainClass.set("MainKt") // Update this if using a package
+31 }
+
+
+
+Creating the Main Kotlin File
+Now, create your Main.kt file inside src/main/kotlin/ .
+If you're using a package (e.g., org.example ), it should look like:
+
+1 package org.example
+2
+3 fun main() {
+4 println("Hello, Gradle with Kotlin DSL!")
+5 }
+
+./gradlew build
+1 ./gradlew run
+
+5️⃣ Packaging as a JAR
+To run the project without IntelliJ, we need a JAR file.
+tasks.register<Jar>("fatJar") {
+2 archiveClassifier.set("all")
+3 duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+4 manifest {
+5 attributes["Main-Class"] = "MainKt"
+6 }
+7 from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) })
+8 with(tasks.jar.get() as CopySpec)
+9 }
+
+./gradlew fatJar
+java -jar build/libs/MVNGRDKOTLINDEMO-1.0-SNAPSHOT-all.jar
+
+
