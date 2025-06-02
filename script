@@ -1,0 +1,240 @@
+
+
+✅ Experiment 2 – Working with Maven
+Steps:
+
+Create a Maven Project in IntelliJ or VS Code.
+
+Understand the structure (src/main/java, pom.xml).
+
+Configure pom.xml with dependencies.
+
+Use Maven Lifecycle: clean, compile, test, package.
+
+Script Snippet (from pom.xml):
+
+<dependencies>
+  <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.1</version>
+    <scope>test</scope>
+  </dependency>
+</dependencies>
+✅ Experiment 3 – Working with Gradle
+Steps (Part 1):
+
+Create a Gradle Project in IntelliJ.
+
+Choose Groovy or Kotlin DSL.
+
+Set up dependencies and plugins in build.gradle.
+
+Script Snippet (Groovy DSL):
+
+plugins {
+    id 'java'
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testImplementation 'junit:junit:4.13.1'
+}
+✅ Experiment 4 – Java App Build & Migration
+Steps:
+
+Build and Run Java App using Maven (mvn clean install).
+
+Migrate the same project to Gradle.
+
+Run Java App using Gradle (gradle build).
+
+No specific scripts beyond reuse of Maven and Gradle scripts from previous experiments.
+
+✅ Experiment 5 – Introduction to Jenkins
+Steps:
+
+Install Jenkins (WAR file, MSI, or Linux package).
+
+Run Jenkins and perform initial setup.
+
+Install required plugins.
+
+No code/script required – setup-oriented.
+
+✅ Experiment 6 – CI with Jenkins
+Steps:
+
+Configure Jenkins with Git, Maven.
+
+Create a Freestyle Job.
+
+Build from local or GitHub Maven project.
+
+Script (Windows Batch Command in Jenkins):
+
+cd D:\Idea Projects\MVNGRDLDEMO
+mvn test
+or
+
+mvn test
+✅ Experiment 7 – Configuration Management with Ansible
+🔸 Provided as a separate PDF (not in this manual).
+Available at: [Google Drive link in PDF]
+
+✅ Experiment 8 – Jenkins CI + Ansible Deployment
+Steps:
+
+Install WSL, Java, Maven, Git, Ansible.
+
+Set up SSH (passwordless).
+
+Jenkins Freestyle job to build & deploy JAR.
+
+Key Scripts:
+
+YAML (Ansible Playbook):
+
+---
+- hosts: localhost
+  tasks:
+    - name: Ensure deployment directory exists
+      file:
+        path: /home/ronnie/deployment
+        state: directory
+        mode: '0755'
+
+    - name: Copy the JAR file to the deployment folder
+      copy:
+        src: /home/ronnie/deployment/*.jar
+        dest: /home/ronnie/deployment/
+Run Playbook:
+
+ansible-playbook /home/ronnie/ansible-deploy/deploy.yml
+Let me know if you'd like the PDF extracts compiled into a summary sheet or formatted for printing.
+
+
+Sources
+You said:
+Divide scripts for whatever steps in that experiment 
+ChatGPT said:
+Here is the step-wise division of scripts for Experiments 2 to 8 based on the DevOps Lab Manual:
+
+✅ Experiment 2: Working with Maven
+Step 1: Create Maven Project
+No script; use IDE to generate project.
+
+Step 2: Understand POM structure
+No script; explore folders: src/main/java, src/test/java, etc.
+
+Step 3: Configure pom.xml
+<dependencies>
+  <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.1</version>
+    <scope>test</scope>
+  </dependency>
+</dependencies>
+Step 4: Run Maven lifecycle commands
+mvn clean
+mvn compile
+mvn test
+mvn package
+✅ Experiment 3: Working with Gradle (Part 1 & 2)
+Step 1: Create Gradle Project
+No script; use IntelliJ Idea > New Project > Gradle.
+
+Step 2: Groovy DSL – build.gradle
+plugins {
+    id 'java'
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testImplementation 'junit:junit:4.13.1'
+}
+Step 3: Kotlin DSL – build.gradle.kts
+plugins {
+    java
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testImplementation("junit:junit:4.13.1")
+}
+Step 4: Build and run
+gradle build
+gradle test
+✅ Experiment 4: Java App with Maven & Gradle
+Step 1: Build Java App with Maven
+mvn clean install
+mvn exec:java -Dexec.mainClass="MainClass"
+Step 2: Migrate to Gradle – Use build.gradle
+(Use same scripts as Experiment 3)
+
+Step 3: Build and run using Gradle
+gradle build
+gradle run
+✅ Experiment 5: Introduction to Jenkins
+Step 1–3: Install Jenkins & Configure
+No script required.
+
+Open Jenkins in browser:
+
+http://localhost:8080
+✅ Experiment 6: Continuous Integration with Jenkins
+Step 1: Setup Jenkins job
+No script (GUI-based setup).
+
+Step 2: Jenkins Build Script
+In Jenkins ➜ Build Section ➜ Execute Windows Batch Command:
+
+cd D:\Idea Projects\MVNGRDLDEMO
+mvn test
+or, for Linux:
+
+mvn test
+✅ Experiment 7: Configuration Management with Ansible
+Step 1: Install Ansible
+sudo apt install ansible
+Step 2: Inventory File (example)
+[local]
+localhost ansible_connection=local
+Step 3: Basic Playbook – basic.yml
+---
+- hosts: localhost
+  tasks:
+    - name: Create a folder
+      file:
+        path: /home/user/demo
+        state: directory
+Step 4: Run the playbook
+ansible-playbook basic.yml
+✅ Experiment 8: CI/CD with Jenkins and Ansible
+Step 1: Passwordless SSH Setup
+ssh-keygen
+ssh-copy-id user@remote
+Step 2: Jenkins Job (Batch Command Example)
+cd /home/ronnie/mavenproject
+mvn clean package
+Step 3: Ansible Playbook – deploy.yml
+---
+- hosts: localhost
+  tasks:
+    - name: Ensure deployment directory exists
+      file:
+        path: /home/ronnie/deployment
+        state: directory
+        mode: '0755'
+
+    - name: Copy the JAR file to the deployment folder
+      copy:
+        src: /home/ronnie/mavenproject/target/*.jar
+        dest: /home/ronnie/deployment/
+Step 4: Run the Playbook
+ansible-playbook /home/ronnie/ansible-deploy/deploy.yml
+Let me 
